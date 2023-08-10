@@ -17,7 +17,7 @@
 MAKE := make
 CC := gcc
 AR := ar
-CFLAGS := -Iinclude -fPIC -g
+CFLAGS := -Iinclude -fPIC
 
 NTLMSSP-SRCS = utils.c \
 	       ntlmssp.c

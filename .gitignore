@@ -54,4 +54,6 @@ dkms.conf
 # Specific shtuff
 pcaps/
 ntlm-sniffer
+ntlm-sniffer-static
 libntlmssp.so
+libntlmssp.a
