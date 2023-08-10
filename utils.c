@@ -18,7 +18,7 @@
 
 #include <utils.h>
 
-#ifndef NTLMSSP_RAW_ONLY
+#ifndef NTLM_RAW_ONLY
 int8_t fetch_interface(char interface[IF_NAMESIZE + 1])
 {
 	int8_t r = 0;

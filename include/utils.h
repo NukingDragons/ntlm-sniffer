@@ -20,13 +20,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-#ifndef NTLMSSP_RAW_ONLY
+// For ntohs/ntohl
+#include <arpa/inet.h>
+
+#ifndef NTLM_RAW_ONLY
 #include <unistd.h>
 #include <sys/socket.h>
 #include <sys/ioctl.h>
 #include <net/if.h>
 #include <net/ethernet.h>
-#include <arpa/inet.h>
 #include <linux/filter.h>
 #include <ifaddrs.h>
 
