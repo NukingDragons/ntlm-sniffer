@@ -1,17 +1,17 @@
 /*
  * Passively collect NetNTLM hashes from unencrypted SMBv1, SMBv2, and HTTP traffic
  * Copyright (C) 2023  Sabrina Andersen (NukingDragons)
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
@@ -257,7 +257,6 @@ int8_t handle_ntlmssp_raw(void *handle, uint8_t *buf, int32_t len, ntlmssp_callb
 		if (len >= size)
 		{
 			// Get the next header type from ethernet frame
-			uint16_t ip_hdr = ntohs(*(uint16_t *) (&buf[12]));
 			if (ntohs(*(uint16_t *) (&buf[12])) == 0x0800)	// IPv4
 			{
 				// Move the size to the end of the header
